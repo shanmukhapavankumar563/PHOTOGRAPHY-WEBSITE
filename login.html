@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* Your previous CSS styles */
+    </style>
+    <script>
+        function login(event) {
+            event.preventDefault();  // Prevent form submission
+
+            // Retrieve form data
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Basic validation
+            if (username === "admin" && password === "password123") {
+                // Redirect to dashboard on successful login
+                window.location.href = "dashboard.html";
+            } else {
+                alert("Invalid username or password");
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form onsubmit="login(event)">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="forgot-password">
+            <a href="file:///D:/My-Gallery-4u-1/My-Gallery-4u-1/index.html">Forgot your password?</a>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
